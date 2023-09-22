@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the product</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="estilo.css"> <!-- Seu arquivo de estilo principal -->
+    <link rel="icon" type="image/png" href="imagens/left-click.png"> <!-- Corrigida a tag rel do ícone -->
+</head>
+<body>
+    <header>
+        <h1 class="site-title">Explore the Mouse Universe!</h1>
+    </header>
+    <nav>
+        <a href="sobre.html" class="pt-link">PT</a>
+        <a href="sobre_en.html" class="en-link">EN</a>
+         <!-- Link para a versão em inglês -->
+    </nav>    
+    <nav>
+        <ul class="menu">
+            <li><a href="index_en.html">Home</a></li>
+            <li><a href="sobre_en.html">About</a></li>
+            <li><a href="modelo_en.html">Models</a></li>
+            <li><a href="contato_en.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page">
+        <h2 class="section-title">About our Computer Mouse:</h2>
+        <div class="section">
+            <h3>Origin of the mouse:</h3>
+            <p>
+                The computer mouse, or simply "mouse", originated in the 1960s. It was invented by Douglas Engelbart, a computer scientist, as a way of facilitating interaction with personal computers. The mouse has become a fundamental device for navigating and selecting elements in graphical user interfaces.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h3 id="funcao-composicao">Its Function and Product Composition:</h3>
+            <p>
+                Modern mice are made up of several parts, including an optical or laser sensor for tracking movement, buttons for clicking (usually left, right and sometimes a middle button), a scroll wheel and a wired or wireless connection for connecting to the computer. In addition, they can have ergonomic designs for greater comfort during use.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h3>Its importance:</h3>
+            <p>
+                Mouse play a critical role in productivity and the user experience when interacting with computers. They are essential tools for everyday tasks such as writing documents, creating digital art, browsing the Internet and even playing games. The evolution of mice over the years has brought innovations that have made computing more accessible and efficient.
+            </p>
+        </div>
+    </div>
+    
+    <center><a href="#" class="back-to-top" id="backToTop">Top</a></center>
+</div>
+
+<br><footer>
+    <div class="rights">
+        <p><b>Leonardo Silva 2023 &copy; All rights reserved</b></p>
+        <p><b>Non-profit academic work</p></b>
+    </div>
+</footer>
+
+<!-- JavaScript para a animação -->
+<script>
+    // Captura o elemento da âncora
+    var backToTop = document.getElementById("backToTop");
+
+    // Adiciona um ouvinte de evento de clique à âncora
+    backToTop.addEventListener("click", function(event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+
+        // Função para animação de rolagem suave
+        function scrollToTop() {
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (currentScroll > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, currentScroll - (currentScroll / 8));
+            }
+        }
+
+        // Inicia a animação de retorno ao topo
+        scrollToTop();
+    });
+
+    // Adicione outro ouvinte de evento de clique para rolar para baixo
+    var scrollDown = document.getElementById("scrollDown");
+
+    scrollDown.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        // Função para rolar para baixo
+        function scrollDownToContent() {
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            var contentOffset = document.getElementById("content").offsetTop; // Substitua "content" pelo ID do elemento para onde você deseja rolar
+
+            if (currentScroll < contentOffset) {
+                window.requestAnimationFrame(scrollDownToContent);
+                window.scrollTo(0, currentScroll + (contentOffset - currentScroll) / 8);
+            }
+        }
+
+        // Inicia a animação de rolagem para baixo
+        scrollDownToContent();
+    });
+</script>
+</body>
+</html>

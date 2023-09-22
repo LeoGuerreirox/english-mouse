@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product models</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="estilo.css"> <!-- Seu arquivo de estilo principal -->
+    <link rel="icon" type="image/png" href="imagens/left-click.png"> <!-- Corrigida a tag rel do ícone -->
+</head>
+<body id="top">
+    <header>
+        <div class="header-content">
+            <h1 class="site-title">Explore the Mouse Universe!</h1>
+
+        </div>
+    </header>
+    
+    <nav>
+        <a href="modelo.html" class="pt-link">PT</a>
+        <a href="modelo_en.html" class="en-link">EN</a>
+         <!-- Link para a versão em inglês -->
+    </nav>  
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index_en.html">Home</a></li>
+            <li><a href="sobre_en.html">About</a></li>
+            <li><a href="modelo_en.html">Models</a></li>
+            <li><a href="contato_en.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page">
+        <h2 class="section-title">Computer mouse models</h2>
+            
+        <!-- Mouse Para Jogo Redragon Griffin M607 Preto -->
+        <div class="model">
+            <div class="model-image">
+                <img src="imagens/dpi.png" alt="Mouse Para Jogo Redragon Griffin M607 Preto">
+            </div>
+            <h3 class="model-title">Redragon Griffin M607 Gaming Mouse Black</h3>
+            <p class="model-info">Manufacturer: Redragon</p>
+            <p class="model-info">Description:
+                The Redragon Griffin M607 Black Gaming Mouse is an exceptional choice for gamers looking for high-precision performance and comfort during long gaming sessions. With an ergonomic design, high-resolution sensor and multiple programmable buttons, this mouse offers an immersive gaming experience.
+            </p>
+            <p class="model-info">Technical specifications:
+                <ul>
+                    <li>Resolution: 7200 DPI</li>
+                    <li>Sensor type: Optical</li>
+                    <li>Connection: USB</li>
+                    <li>Number of Buttons: 7</li>
+                    <li>Customizable RGB lighting</li>
+                </ul>
+            </p>
+            <p class="model-price">Price: R$ 159,90</p>
+        </div>
+        
+        <!-- Mouse Dell WM126 -->
+        <div class="model">
+            <div class="model-image">
+                <img src="imagens/dell.png" alt="Mouse Dell WM126">
+            </div>
+            <h3 class="model-title">Mouse Dell WM126</h3>
+            <p class="model-info">Manufacturer: Dell</p>
+            <p class="model-info">Description:
+                The Dell WM126 Mouse is a reliable choice for everyday use and productivity. With its compact, wireless design, it offers convenience for those who need a portable mouse. In addition, the Dell brand is known for its quality and durability.
+            </p>
+            <p class="model-info">Technical specifications:
+                <ul>
+                    <li>Resolution: 1000 DPI</li>
+                    <li>Connection type: Wireless (RF 2.4 GHz)</li>
+                    <li>Number of Buttons: 3</li>
+                </ul>
+            </p>
+            <p class="model-price">Price: R$ 49,99</p>
+        </div>
+        
+        <!-- HyperX Pulsefire Surge Mouse -->
+        <div class="model">
+            <div class="model-image">
+                <img src="imagens/hyper.png" alt="HyperX Pulsefire Surge Mouse">
+            </div>
+            <h3 class="model-title">HyperX Pulsefire Surge Mouse</h3>
+            <p class="model-info">Manufacturer: HyperX</p>
+            <p class="model-info">Description:
+                The HyperX Pulsefire Surge Mouse is a high-performance mouse designed for demanding gamers. With a precise sensor, spectacular RGB lighting and ergonomic design, this mouse offers an incredible gaming experience.
+            </p>
+            <p class="model-info">Technical specifications:
+                <ul>
+                    <li>Resolution 16000 DPI</li>
+                    <li>Sensor type: Pixart 3389</li>
+                    <li>Connection: USB</li>
+                    <li>Number of Buttons: 6</li>
+                    <li>Customizable RGB lighting</li>
+                </ul>
+            </p>
+            <p class="model-price">Price: R$ 299,90</p>
+        </div>
+    </div>
+    <!-- Âncora para o topo da página com animação -->
+    <center><a href="#top" class="back-to-top" id="backToTop">Top</a></center>
+</div>
+
+<br><footer>
+    <div class="rights">
+            <p><b>Leonardo Silva 2023 &copy; All rights reserved</b></p>
+            <p><b>Non-profit academic work</p>
+    </div>
+</footer>
+
+<!-- JavaScript para a animação -->
+<script>
+    // Captura o elemento da âncora
+    var backToTop = document.getElementById("backToTop");
+
+    // Adiciona um ouvinte de evento de clique à âncora
+    backToTop.addEventListener("click", function(event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+
+        // Função para animação de rolagem suave
+        function scrollToTop() {
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (currentScroll > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, currentScroll - (currentScroll / 8));
+            }
+        }
+
+        // Inicia a animação de retorno ao topo
+        scrollToTop();
+    });
+
+    // Adicione outro ouvinte de evento de clique para rolar para baixo
+    var scrollDown = document.getElementById("scrollDown");
+
+    scrollDown.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        // Função para rolar para baixo
+        function scrollDownToContent() {
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            var contentOffset = document.getElementById("content").offsetTop; // Substitua "content" pelo ID do elemento para onde você deseja rolar
+
+            if (currentScroll < contentOffset) {
+                window.requestAnimationFrame(scrollDownToContent);
+                window.scrollTo(0, currentScroll + (contentOffset - currentScroll) / 8);
+            }
+        }
+
+        // Inicia a animação de rolagem para baixo
+        scrollDownToContent();
+    });
+</script>
+</body>
+</html>

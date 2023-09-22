@@ -1,0 +1,339 @@
+/* Estilos globais */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, black, #8b0000);
+    color: rgb(250, 182, 57);
+    scrollbar-width: thin;
+    scrollbar-color: auto;
+    overflow: auto;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background: linear-gradient(to right, black, #8b0000);
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: white;
+}
+
+/* Estilo do título do site */
+.site-title {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Estilo do menu de navegação */
+.menu {
+    text-align: center;
+    padding: 10px;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.menu a {
+    color: #ffdb58;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff5733;
+}
+
+/* Estilo do menu de navegação */
+nav {
+    background: linear-gradient(to right, black, #8b0000);
+    text-align: center;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(250, 182, 57);
+}
+
+/* Estilo para a imagem com efeito de escala */
+.imagem {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.imagem img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagem img:hover {
+    transform: scale(0.9);
+}
+
+.rights {
+    background-color: #222;
+    color: rgb(250, 182, 57);
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.rights p {
+    margin: 6px;
+}
+
+/* Estilo para a seção de título */
+.section-title {
+    font-size: 36px;
+    color: #ff5733;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilo para cada seção de conteúdo */
+.section {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ff5733;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    max-height: 100vh;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+/* Estilo para o texto dentro das seções */
+.section h3 {
+    color: white;
+    font-size: 24px;
+}
+
+.section p {
+    color: #ffdb58;
+    font-size: 18px;
+}
+
+
+/* Estilo para a âncora "Voltar ao Topo" */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    z-index: 2; /* Defina um z-index maior para a âncora */
+}
+
+/* Efeito de mudança de cor ao passar o mouse sobre a âncora */
+.back-to-top:hover {
+    background-color: #ff5733;
+    color: white;
+    text-decoration: none; /* Remover o sublinhado ao passar o mouse */
+}
+
+/* Estilos para os modelos de mouse */
+.model {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #ff5733;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+/* Estilos para as imagens dos modelos de mouse */
+.model-image img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilo para o título dos modelos */
+.model-title {
+    font-size: 24px;
+    color: #ff5733;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilo para as informações dos modelos */
+.model-info {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilo para o preço dos modelos */
+.model-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5733;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilo para a seção de formulário de contato */
+.pagina-contato {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, black, #8b0000);
+    color: rgb(250, 182, 57);
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    bottom: -115px;
+    width: 100%;
+    z-index: 1;
+}
+
+.pagina-contato .section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ff5733;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pagina-contato .section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.pagina-contato .section input[type="text"],
+.pagina-contato .section input[type="email"],
+.pagina-contato .section input[type="tel"],
+.pagina-contato .section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ff5733;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.pagina-contato .section button {
+    background-color: #ffdb58;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.pagina-contato .section button:hover {
+    background-color: #ff5733;
+    color: white;
+}
+
+.pagina-contato .error {
+    color: #ff5733;
+    font-size: 14px;
+}
+
+.pagina-contato .success {
+    color: #33ff33;
+    font-size: 18px;
+}
+
+/* Estilo para os links de volta à página inicial */
+.link-home {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #ffdb58;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.link-home:hover {
+    color: #ff5733;
+}
+
+/* Estilos para os grupos de formulários */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.model-image img {
+    max-width: 100%;
+    max-height: 250px; /* Altura máxima para as imagens */
+    width: auto;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0 auto;
+}
+
+.pt-link {
+    color: rgb(250, 182, 57);
+}
+
+.en-link {
+color: rgb(250, 182, 57);
+} 

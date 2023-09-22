@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="estilo.css"> <!-- Seu arquivo de estilo principal -->
+    <link rel="icon" type="image/png" href="imagens/left-click.png">
+</head>
+<body class="pagina-contato">
+    <header>
+        <h1 class="site-title">Explore o Universo dos Mouses!</h1>
+        <nav>
+            <a href="contato.html" class="pt-link">PT</a>
+            <a href="contato_en.html" class="en-link">EN</a>
+             <!-- Link para a versão em inglês -->
+        </nav>    
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="modelo.html">Modelo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    
+    <section id="contato" class="section">
+        <h2 class="section-title">Entre em Contato</h2>
+        <p>Estamos ansiosos para ouvir de você! Preencha o formulário abaixo para entrar em contato conosco.</p>
+
+        <form id="contato-form" action="#" method="GET">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <div id="nome-error" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div id="email-error" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                <div id="telefone-error" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea style="resize: none" id="mensagem" name="mensagem" rows="4" required></textarea>
+                <div id="mensagem-error" class="error"></div>
+            </div>
+
+            <button type="button" onclick="validarForm()">Enviar</button>
+        </form>
+
+        <div id="sucesso" class="success"></div>
+    </section>
+    <!-- Âncora para o topo da página com animação -->
+    <br><center><a href="#top" class="back-to-top" id="backToTop">Topo</a></center>
+
+    <footer><br>
+        <div class="rights">
+            <p><b>Leonardo Silva 2023 &copy; Todos os direitos reservados</b></p>
+            <p><b>Trabalho acadêmico sem fins lucrativos</b></p>
+        </div>
+    </footer>
+
+    <script>
+        function validarForm() {
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const telefone = document.getElementById("telefone").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            const nomeError = document.getElementById("nome-error");
+            const emailError = document.getElementById("email-error");
+            const telefoneError = document.getElementById("telefone-error");
+            const mensagemError = document.getElementById("mensagem-error");
+            const sucesso = document.getElementById("sucesso");
+
+            nomeError.textContent = "";
+            emailError.textContent = "";
+            telefoneError.textContent = "";
+            mensagemError.textContent = "";
+            sucesso.textContent = "";
+
+            // Validação do campo Nome (pelo menos 3 caracteres)
+            if (nome.length < 3) {
+                nomeError.textContent = "O nome deve ter pelo menos 3 caracteres";
+            }
+
+            // Validação do campo Email (formato de email válido)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailError.textContent = "Insira um email válido";
+            }
+
+            // Validação do campo Telefone (formato de telefone válido)
+            const telefoneRegex = /^\d{2}-\d{5}-\d{4}$/; // Formato XX-XXXXX-XXXX
+            if (!telefoneRegex.test(telefone)) {
+                telefoneError.textContent = "Insira um número de telefone válido no formato XX-XXXXX-XXXX";
+            }
+
+            // Validação do campo Mensagem (pelo menos 10 caracteres)
+            if (mensagem.length < 10) {
+                mensagemError.textContent = "A mensagem deve ter pelo menos 10 caracteres";
+            }
+
+            // Se não houver erros, exiba uma mensagem de sucesso
+            if (nomeError.textContent === "" && emailError.textContent === "" && telefoneError.textContent === "" && mensagemError.textContent === "") {
+                sucesso.textContent = "Formulário enviado com sucesso!";
+            }
+        }
+
+        // Captura o elemento da âncora
+        var backToTop = document.getElementById("backToTop");
+
+        // Adiciona um ouvinte de evento de clique à âncora
+        backToTop.addEventListener("click", function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+
+            // Função para animação de rolagem suave
+            function scrollToTop() {
+                var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+                if (currentScroll > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, currentScroll - (currentScroll / 8));
+                }
+            }
+
+            // Inicia a animação
+            scrollToTop();
+        });
+
+        
+    </script>
+</body>
+</html>
