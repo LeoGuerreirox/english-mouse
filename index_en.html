@@ -28,13 +28,60 @@
     <div class="imagem">
         <img src="imagens/mouse.jpg" alt="Imagem de um mouse">
     </div>
-        
-        
-    <footer>
-        <div class="rights">
+    <!-- Âncora para o topo da página com animação -->
+    <center><a href="#top" class="back-to-top" id="backToTop">Top</a></center>
+</div>
+
+<br><footer>
+    <div class="rights">
             <p><b>Leonardo Silva 2023 &copy; All rights reserved</b></p>
-            <p><b>Non-profit academic work</b></p>
-        </div>
-    </footer>
+            <p><b>Non-profit academic work</p>
+    </div>
+</footer>
+
+<!-- JavaScript para a animação -->
+<script>
+    // Captura o elemento da âncora
+    var backToTop = document.getElementById("backToTop");
+
+    // Adiciona um ouvinte de evento de clique à âncora
+    backToTop.addEventListener("click", function(event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+
+        // Função para animação de rolagem suave
+        function scrollToTop() {
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (currentScroll > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, currentScroll - (currentScroll / 8));
+            }
+        }
+
+        // Inicia a animação de retorno ao topo
+        scrollToTop();
+    });
+
+    // Adicione outro ouvinte de evento de clique para rolar para baixo
+    var scrollDown = document.getElementById("scrollDown");
+
+    scrollDown.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        // Função para rolar para baixo
+        function scrollDownToContent() {
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            var contentOffset = document.getElementById("content").offsetTop; // Substitua "content" pelo ID do elemento para onde você deseja rolar
+
+            if (currentScroll < contentOffset) {
+                window.requestAnimationFrame(scrollDownToContent);
+                window.scrollTo(0, currentScroll + (contentOffset - currentScroll) / 8);
+            }
+        }
+
+        // Inicia a animação de rolagem para baixo
+        scrollDownToContent();
+    });
+</script>
 </body>
 </html>
