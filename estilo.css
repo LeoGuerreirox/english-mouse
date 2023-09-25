@@ -6,9 +6,6 @@ body {
     padding: 0;
     background: linear-gradient(to right, black, #8b0000);
     color: rgb(250, 182, 57);
-    scrollbar-width: thin;
-    scrollbar-color: auto;
-    overflow: auto;
 }
 
 /* Estilo do cabeçalho */
