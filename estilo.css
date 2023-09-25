@@ -1,14 +1,12 @@
 /* Estilos globais */
 
 body {
+    body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, black, #8b0000);
     color: rgb(250, 182, 57);
-    scrollbar-width: thin;
-    scrollbar-color: auto;
-    overflow: auto;
 }
 
 /* Estilo do cabeçalho */
@@ -23,6 +21,11 @@ header h1 {
     font-size: 36px;
     color: white;
 }
+
+.header-content {
+    max-height: 100vh; /* Define a altura máxima do cabeçalho como 100% da altura da tela */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a altura máxima */
+}    
 
 /* Estilo do título do site */
 .site-title {
